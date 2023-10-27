@@ -6,7 +6,6 @@ use Collective\Html\HtmlServiceProvider;
 use Illuminate\Support\ServiceProvider;
 use League\Fractal\Manager;
 use League\Fractal\Serializer\DataArraySerializer;
-use Maatwebsite\Excel\ExcelServiceProvider;
 use Yajra\Datatables\Generators\DataTablesMakeCommand;
 use Yajra\Datatables\Generators\DataTablesScopeCommand;
 
@@ -120,7 +119,6 @@ class DatatablesServiceProvider extends ServiceProvider
     protected function registerRequiredProviders()
     {
         $this->app->register(HtmlServiceProvider::class);
-        $this->app->register(ExcelServiceProvider::class);
     }
 
     /**
